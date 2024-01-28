@@ -18,9 +18,12 @@ namespace ListValedictorian_With_DB
     public partial class MainWindow : Window
     {
         private readonly FileCsvContext _context;
+        private readonly CaculateTopStudentInEachYear _topStudentInEachYear;
+        private string _yearSelected;
         public MainWindow()
         {
             _context = new FileCsvContext();
+            _topStudentInEachYear = new CaculateTopStudentInEachYear();
             InitializeComponent();
             LoadYearsOnCombobox();
         }
@@ -36,30 +39,27 @@ namespace ListValedictorian_With_DB
             {
                 MessageBox.Show("Please selected year");
             }
-            cbYear.SelectedItem.ToString();
+            _yearSelected = cbYear.SelectedItem.ToString();
         }
 
         private void btnShow_Click(object sender, RoutedEventArgs e)
         {
-            var selectedYear = cbYear.SelectedItem.ToString();
-            var loadData = CaculateValedictorianWithBlockA(selectedYear);
-            listData.ItemsSource = loadData;
-        }
+            if (int.TryParse(_yearSelected, out int selectedYear))
+            {
+                var loadDataA = _topStudentInEachYear.CaculateValedictorianWithBlockA(selectedYear);
+                var loadDataB = _topStudentInEachYear.CaculateValedictorianWithBlockB(selectedYear);
+                var loadDataC = _topStudentInEachYear.CaculateValedictorianWithBlockC(selectedYear);
+                var loadDataD1 = _topStudentInEachYear.CaculateValedictorianWithBlockD1(selectedYear);
+                var loadDataA1 = _topStudentInEachYear.CaculateValedictorianWithBlockA1(selectedYear);
 
-        private List<DataStatistics> CaculateValedictorianWithBlockA(string year)
-        {
-            var mathScore = _context.MarkReports.Where(x => x.Year.Equals(year)).
-                Select(x => new DataStatistics
-                {
-                    Sbd = x.Sbd,
-                    Score01 = x.Toan,
-                    Score02 = x.Ly,
-                    Score03 = x.Hoa,
-                    TotalScore = x.Hoa + x.Ly + x.Toan,
-                    Subjects = "Toan, Ly, Hoa"
-                }).ToList();
-
-            return mathScore;
+                var combinedData = loadDataA.Concat(loadDataB).Concat(loadDataC).Concat(loadDataD1).Concat(loadDataA1).ToList();
+                listData.ItemsSource = combinedData;
+                MessageBox.Show("The students of " + selectedYear + " have been shown!");
+            }
+            else
+            {
+                MessageBox.Show("Invalid year selected.");
+            }
         }
     }
 }

@@ -104,3 +104,4 @@ D:\Documents\Repositories\ListValedictorian\ListValedictorian_With_DB\bin\Debug\
 D:\Documents\Repositories\ListValedictorian\ListValedictorian_With_DB\bin\Debug\net8.0-windows\AppData.dll
 D:\Documents\Repositories\ListValedictorian\ListValedictorian_With_DB\bin\Debug\net8.0-windows\AppData.pdb
 D:\Documents\Repositories\ListValedictorian\ListValedictorian_With_DB\obj\Debug\net8.0-windows\ListValedictorian_With_DB.csproj.AssemblyReference.cache
+D:\Documents\Repositories\ListValedictorian\ListValedictorian_With_DB\obj\Debug\net8.0-windows\ListValedictorian_With_DB.sourcelink.json
