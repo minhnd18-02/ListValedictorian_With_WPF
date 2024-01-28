@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListValedictorian_With_DB", "ListValedictorian_With_DB\ListValedictorian_With_DB.csproj", "{BDF18CFF-C772-4A33-A372-D74F5F652AC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppData", "AppData\AppData.csproj", "{7D765935-2306-4247-BBEC-62B2721EA463}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDF18CFF-C772-4A33-A372-D74F5F652AC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDF18CFF-C772-4A33-A372-D74F5F652AC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDF18CFF-C772-4A33-A372-D74F5F652AC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDF18CFF-C772-4A33-A372-D74F5F652AC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D765935-2306-4247-BBEC-62B2721EA463}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D765935-2306-4247-BBEC-62B2721EA463}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D765935-2306-4247-BBEC-62B2721EA463}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D765935-2306-4247-BBEC-62B2721EA463}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C59F2F2-F708-4AAC-8738-13304D337337}
+	EndGlobalSection
+EndGlobal
